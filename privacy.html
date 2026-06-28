@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — eChama</title>
+  <link rel="icon" type="image/png" href="/echama-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      background: #FAFAF9;
+      color: #1C1917;
+      -webkit-font-smoothing: antialiased;
+    }
+    :root {
+      --bg:         #FAFAF9;
+      --surface:    #FFFFFF;
+      --nav-bg:     #1C1917;
+      --primary:    #059669;
+      --primary-dk: #047857;
+      --primary-lt: #ECFDF5;
+      --text:       #1C1917;
+      --text-muted: #78716C;
+      --border:     #E7E5E4;
+      --radius:     8px;
+    }
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── Navbar ── */
+    nav {
+      background: var(--nav-bg);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      text-decoration: none;
+    }
+    .nav-logo-img {
+      height: 56px; width: auto; display: block; object-fit: contain; margin-top: 6px;
+    }
+    .nav-logo-text { font-size: 18px; font-weight: 700; color: #fff; margin-left: -13px; }
+    .nav-right { display: flex; align-items: center; gap: 8px; }
+    .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,0.65); text-decoration: none; font-size: 14px;
+      font-weight: 500; padding: 6px 14px; border-radius: var(--radius);
+      transition: color 0.15s, background 0.15s;
+    }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+    .btn-nav {
+      background: var(--primary); color: #fff; text-decoration: none;
+      font-size: 14px; font-weight: 600; padding: 8px 20px;
+      border-radius: var(--radius); border: none; cursor: pointer;
+      transition: background 0.15s;
+    }
+    .btn-nav:hover { background: var(--primary-dk); }
+
+    /* ── Page header ── */
+    .page-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 56px 0 48px;
+    }
+    .page-header-label {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--primary); margin-bottom: 12px;
+    }
+    .page-header h1 {
+      font-size: 40px; font-weight: 800; letter-spacing: -1px;
+      color: var(--text); margin-bottom: 12px;
+    }
+    .page-header-meta {
+      font-size: 14px; color: var(--text-muted);
+    }
+
+    /* ── Policy body ── */
+    .policy-layout {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 56px;
+      padding: 64px 0 96px;
+      align-items: start;
+    }
+    @media (max-width: 768px) {
+      .policy-layout { grid-template-columns: 1fr; }
+      .policy-toc { display: none; }
+      .page-header h1 { font-size: 28px; }
+    }
+
+    /* ── Table of contents ── */
+    .policy-toc {
+      position: sticky;
+      top: 84px;
+    }
+    .toc-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--text-muted); margin-bottom: 14px;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { margin-bottom: 6px; }
+    .toc-list a {
+      font-size: 13px; color: var(--text-muted); text-decoration: none;
+      line-height: 1.5; transition: color 0.15s;
+    }
+    .toc-list a:hover { color: var(--primary); }
+
+    /* ── Policy content ── */
+    .policy-content section {
+      margin-bottom: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--border);
+    }
+    .policy-content section:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+    .policy-content h2 {
+      font-size: 22px; font-weight: 700; color: var(--text);
+      letter-spacing: -0.3px; margin-bottom: 16px;
+    }
+    .policy-content h3 {
+      font-size: 16px; font-weight: 600; color: var(--text);
+      margin-top: 24px; margin-bottom: 10px;
+    }
+    .policy-content p {
+      font-size: 15px; color: var(--text-muted); line-height: 1.75;
+      margin-bottom: 14px;
+    }
+    .policy-content p:last-child { margin-bottom: 0; }
+    .policy-content ul {
+      margin: 10px 0 14px 0; padding-left: 20px;
+    }
+    .policy-content ul li {
+      font-size: 15px; color: var(--text-muted); line-height: 1.75;
+      margin-bottom: 6px;
+    }
+    .highlight-box {
+      background: var(--primary-lt);
+      border: 1px solid #A7F3D0;
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+    .highlight-box p {
+      color: #065F46;
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+    .stripe-box {
+      background: #F5F3FF;
+      border: 1px solid #DDD6FE;
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+    .stripe-box p {
+      color: #4C1D95;
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: calc(var(--radius) + 2px);
+      padding: 28px 32px;
+      margin-top: 16px;
+    }
+    .contact-card p { color: var(--text); margin-bottom: 6px; }
+    .contact-card a { color: var(--primary); text-decoration: none; }
+    .contact-card a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--nav-bg);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 48px 0 32px;
+    }
+    .footer-inner {
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 24px; flex-wrap: wrap;
+    }
+    .footer-logo { display: flex; align-items: center; gap: 0; text-decoration: none; }
+    .footer-logo-img { height: 56px; width: auto; display: block; object-fit: contain; margin-top: 6px; }
+    .footer-logo-text { font-size: 16px; font-weight: 700; color: #fff; margin-left: -13px; }
+    .footer-links { display: flex; gap: 24px; list-style: none; }
+    .footer-links a {
+      color: rgba(255,255,255,0.45); text-decoration: none;
+      font-size: 14px; transition: color 0.15s;
+    }
+    .footer-links a:hover { color: rgba(255,255,255,0.9); }
+    .footer-copy {
+      width: 100%; text-align: center; font-size: 13px;
+      color: rgba(255,255,255,0.25); margin-top: 32px;
+      padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navbar ── -->
+  <nav>
+    <div class="container">
+      <div class="nav-inner">
+        <a href="/echama.html" class="nav-logo">
+          <img src="/echama-logo.png" alt="eChama logo" class="nav-logo-img" />
+          <span class="nav-logo-text">eChama</span>
+        </a>
+        <div class="nav-right">
+          <ul class="nav-links">
+            <li><a href="/echama.html">Home</a></li>
+            <li><a href="/echama.html#features">About</a></li>
+          </ul>
+          <a href="/auth/login" class="btn-nav">Login →</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Page Header ── -->
+  <div class="page-header">
+    <div class="container">
+      <div class="page-header-label">Legal</div>
+      <h1>Privacy Policy</h1>
+      <p class="page-header-meta">Effective date: April 26, 2026 &nbsp;·&nbsp; Last updated: June 6, 2026</p>
+    </div>
+  </div>
+
+  <!-- ── Policy Body ── -->
+  <div class="container">
+    <div class="policy-layout">
+
+      <!-- Table of contents -->
+      <aside class="policy-toc">
+        <div class="toc-label">On this page</div>
+        <ul class="toc-list">
+          <li><a href="#introduction">1. Introduction</a></li>
+          <li><a href="#information-collected">2. Information We Collect</a></li>
+          <li><a href="#financial-connections">3. Banking Integrations (Plaid &amp; Stripe)</a></li>
+          <li><a href="#how-we-use">4. How We Use Your Information</a></li>
+          <li><a href="#sharing">5. Information Sharing</a></li>
+          <li><a href="#retention">6. Data Retention</a></li>
+          <li><a href="#security">7. Security</a></li>
+          <li><a href="#your-rights">8. Your Rights</a></li>
+          <li><a href="#cookies">9. Cookies</a></li>
+          <li><a href="#children">10. Children's Privacy</a></li>
+          <li><a href="#changes">11. Changes to This Policy</a></li>
+          <li><a href="#contact">12. Contact Us</a></li>
+        </ul>
+      </aside>
+
+      <!-- Policy content -->
+      <div class="policy-content">
+
+        <section id="introduction">
+          <h2>1. Introduction</h2>
+          <p>
+            eChama ("we," "our," or "us") operates a group savings management platform
+            that digitizes the cooperative savings club experience for communities with
+            common financial goals. This Privacy Policy explains how we collect, use, share,
+            and protect information about you when you use our website and services
+            (collectively, the "Services").
+          </p>
+          <p>
+            By creating an account or using the Services, you agree to the collection
+            and use of information as described in this policy. If you do not agree,
+            please do not use the Services.
+          </p>
+          <div class="highlight-box">
+            <p>
+              <strong>Summary:</strong> eChama collects personal and financial information
+              to operate your group savings account, match contributions, and ensure
+              every member can see an accurate, transparent record of group finances.
+              We do not sell your data.
+            </p>
+          </div>
+        </section>
+
+        <section id="information-collected">
+          <h2>2. Information We Collect</h2>
+
+          <h3>2.1 Account and Identity Information</h3>
+          <p>When you register for an eChama account we collect:</p>
+          <ul>
+            <li>Full name (first and last)</li>
+            <li>Email address</li>
+            <li>Phone number (optional)</li>
+            <li>Profile photo (optional — uploaded by you and stored via our cloud file storage provider)</li>
+            <li>Password (stored as a salted cryptographic hash — we never store your plaintext password)</li>
+          </ul>
+
+          <h3>2.2 Group and Membership Information</h3>
+          <p>As part of using the group savings features we collect:</p>
+          <ul>
+            <li>Group name, description, and membership role (Admin or Member)</li>
+            <li>Contribution history — amounts, dates, and transaction references</li>
+            <li>Case event submissions (benefit claims) and approval history</li>
+            <li>Invitation and activation records</li>
+            <li>Named position within a group (e.g., Secretary, Treasurer)</li>
+          </ul>
+
+          <h3>2.3 Financial Account Information (via Plaid and Stripe)</h3>
+          <p>
+            When a group administrator connects a bank account through our banking
+            integrations, we collect financial data as described in Section 3 below.
+          </p>
+
+          <h3>2.4 Usage and Technical Information</h3>
+          <p>We automatically collect certain technical data when you use the Services:</p>
+          <ul>
+            <li>IP address and approximate geographic location</li>
+            <li>Browser type, operating system, and device identifiers</li>
+            <li>Pages visited, features used, and session duration</li>
+            <li>Login timestamps and authentication events</li>
+          </ul>
+        </section>
+
+        <section id="financial-connections">
+          <h2>3. Banking Integrations (Plaid &amp; Stripe)</h2>
+          <p>
+            eChama uses two third-party financial services — Plaid for bank account
+            linking and transaction sync, and Stripe for payment processing. Each is
+            described below.
+          </p>
+
+          <h3>3.1 Plaid — bank account linking and transaction sync</h3>
+          <div class="stripe-box">
+            <p>
+              <strong>Plaid disclosure:</strong> eChama uses Plaid to connect your
+              group's bank account, sync transactions, and retrieve balances. By
+              linking a bank account through Plaid Link, you authorise Plaid to share
+              the financial data described below with eChama on your behalf. Plaid's
+              use of your data is governed by the
+              <a href="https://plaid.com/legal/#consumers" target="_blank" rel="noopener noreferrer" style="color:#6D28D9;">Plaid Privacy Policy</a>
+              and the
+              <a href="https://plaid.com/legal/end-user-privacy-policy/" target="_blank" rel="noopener noreferrer" style="color:#6D28D9;">Plaid End User Privacy Policy</a>.
+            </p>
+          </div>
+          <p>Through Plaid, eChama accesses the following data from your connected bank account:</p>
+          <ul>
+            <li><strong>Account identity</strong> — institution name, account name, account type (checking/savings), and last 4 digits of the account number; full account numbers are never stored</li>
+            <li><strong>Account balance</strong> — current and available balance, polled on initial connection and daily thereafter to show group totals</li>
+            <li><strong>Transaction history</strong> — inbound and outbound transactions including amount, date, bank description, merchant name, and counterparty name where Plaid identifies the other party</li>
+            <li><strong>Raw transaction data</strong> — the full Plaid transaction payload is stored in our database for audit and reconciliation purposes</li>
+          </ul>
+          <p>
+            Plaid access tokens are encrypted at rest using AES-256-GCM encryption
+            and are never stored in plaintext. They are deleted immediately when a
+            group administrator disconnects the linked bank account.
+          </p>
+
+          <h3>3.2 Stripe — payment processing</h3>
+          <div class="stripe-box">
+            <p>
+              <strong>Stripe disclosure:</strong> eChama uses Stripe to process member
+              contribution payments (card payments and ACH) and to support Stripe
+              Financial Connections for bank verification. Stripe handles payment
+              authorisation, payment confirmation, and webhook notifications. Stripe's
+              use of your data is governed by the
+              <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer" style="color:#6D28D9;">Stripe Privacy Policy</a>
+              and the
+              <a href="https://stripe.com/legal/consumer" target="_blank" rel="noopener noreferrer" style="color:#6D28D9;">Stripe Consumer Terms</a>.
+            </p>
+          </div>
+
+          <h3>3.3 Why we access this financial data</h3>
+          <p>We use financial integration data exclusively to:</p>
+          <ul>
+            <li>Match incoming bank transactions to eChama member contributions automatically or manually</li>
+            <li>Display real-time group account balance and transaction history to group administrators</li>
+            <li>Generate contribution and payment reports for group members</li>
+            <li>Process contribution payments made by members via card or ACH</li>
+            <li>Reconcile payment payouts against synced bank transactions</li>
+          </ul>
+
+          <h3>3.4 How we protect and store financial data</h3>
+          <ul>
+            <li>Plaid access tokens are encrypted at rest using AES-256-GCM encryption before storage — never stored or logged in plaintext</li>
+            <li>Full bank account numbers are never stored — only the last 4 digits (mask) are retained for display</li>
+            <li>Financial data is never used for advertising, profiling, or sold to third parties</li>
+            <li>Access to financial data is restricted to group administrators of the specific connected group</li>
+          </ul>
+
+          <h3>3.5 Disconnecting your bank account</h3>
+          <p>
+            Group administrators may disconnect a linked bank account at any time from
+            the Banking section of the eChama dashboard. Upon disconnection, the Plaid
+            access token is immediately revoked and deleted from our servers. Historical
+            transaction records already synced to eChama are retained for audit
+            compliance purposes as described in Section 6.
+          </p>
+        </section>
+
+        <section id="how-we-use">
+          <h2>4. How We Use Your Information</h2>
+          <p>We use the information we collect to:</p>
+          <ul>
+            <li><strong>Operate the Services</strong> — create and manage your account, process group memberships, record contributions, and facilitate benefit claim events</li>
+            <li><strong>Contribution matching</strong> — automatically or manually match bank transactions to member contributions using counterparty names and transaction details</li>
+            <li><strong>Communications</strong> — send email notifications for account verification, password resets, group invitations, membership changes, and contribution confirmations</li>
+            <li><strong>Security and fraud prevention</strong> — detect suspicious login activity, enforce account lockout policies, and maintain a tamper-evident audit log</li>
+            <li><strong>Compliance</strong> — maintain financial records required by applicable law and support regulatory audits</li>
+            <li><strong>Service improvement</strong> — analyse usage patterns (in aggregate, non-identifiable form) to improve the platform</li>
+          </ul>
+          <p>
+            We do not use your personal or financial information for advertising or
+            marketing purposes beyond communications directly related to your use of
+            the Services.
+          </p>
+        </section>
+
+        <section id="sharing">
+          <h2>5. Information Sharing</h2>
+          <p>
+            eChama does not sell, rent, or trade your personal information. We share
+            information only in the following limited circumstances:
+          </p>
+
+          <h3>5.1 Within your group</h3>
+          <p>
+            Contribution amounts, dates, and member names are visible to all active
+            members of a group to support the transparency that cooperative savings
+            requires. Case event details are visible to group administrators.
+            Sensitive personal information (password, full bank account number,
+            phone number) is never shared with other group members.
+          </p>
+
+          <h3>5.2 Service providers</h3>
+          <ul>
+            <li><strong>Plaid</strong> — bank account linking (Plaid Link), transaction sync, and balance retrieval. Governed by the Plaid Privacy Policy and Plaid End User Privacy Policy.</li>
+            <li><strong>Stripe</strong> — payment processing, Stripe Financial Connections, and ACH payment initiation. Governed by the Stripe Privacy Policy.</li>
+            <li><strong>Email delivery providers</strong> — Resend or SendGrid, used solely to deliver transactional emails (verification, notifications, alerts)</li>
+            <li><strong>Cloud file storage</strong> — Cloudinary, used to store member profile photos uploaded voluntarily to the platform</li>
+            <li><strong>Cloud infrastructure</strong> — hosting providers that store and process data on our behalf under confidentiality obligations</li>
+          </ul>
+
+          <h3>5.3 Legal requirements</h3>
+          <p>
+            We may disclose information if required by law, regulation, legal process,
+            or governmental request, or to protect the rights, property, or safety of
+            eChama, our users, or the public.
+          </p>
+
+          <h3>5.4 Business transfers</h3>
+          <p>
+            If eChama is involved in a merger, acquisition, or sale of assets, your
+            information may be transferred as part of that transaction. We will notify
+            affected users before information becomes subject to a different privacy policy.
+          </p>
+        </section>
+
+        <section id="retention">
+          <h2>6. Data Retention</h2>
+          <p>
+            eChama follows a 7-year retention policy for financial records to comply
+            with applicable financial recordkeeping requirements. Specifically:
+          </p>
+          <ul>
+            <li><strong>Contribution records</strong> — retained for 7 years from the date of the contribution regardless of membership status</li>
+            <li><strong>Audit logs</strong> — retained for 7 years and are immutable (records cannot be altered or deleted)</li>
+            <li><strong>Transaction data</strong> — transaction records synced from connected bank accounts via Plaid are retained for 7 years</li>
+            <li><strong>Balance snapshots</strong> — daily account balance snapshots are retained for 365 days to support trend analysis and reporting</li>
+            <li><strong>Account information</strong> — retained while your account is active, and for 12 months after deactivation to allow reactivation and to complete pending obligations</li>
+            <li><strong>Plaid access tokens</strong> — deleted immediately upon bank account disconnection; never retained beyond that point</li>
+          </ul>
+          <p>
+            You may request deletion of your personal account information at any time
+            (see Section 8). Financial transaction and contribution records subject to
+            the 7-year policy cannot be deleted during the retention period.
+          </p>
+        </section>
+
+        <section id="security">
+          <h2>7. Security</h2>
+          <p>
+            We implement industry-standard security measures to protect your information:
+          </p>
+          <ul>
+            <li>All data transmitted between your browser and our servers is encrypted using TLS 1.2 or higher</li>
+            <li>Passwords are stored using bcrypt hashing with a work factor of 12 — plaintext passwords are never stored or logged</li>
+            <li>Plaid bank access tokens are encrypted at rest using AES-256-GCM encryption — never stored or logged in plaintext</li>
+            <li>JSON Web Tokens (JWTs) used for authentication expire after 30 minutes, with session inactivity enforcing automatic logout after 15 minutes in line with PCI DSS guidelines</li>
+            <li>Role-based access control ensures members can only access data within their own group</li>
+            <li>All administrative actions are recorded in a tamper-evident audit log</li>
+            <li>Account lockout is triggered after 5 consecutive failed login attempts</li>
+          </ul>
+          <p>
+            While we take security seriously, no system is completely secure. If you
+            believe your account has been compromised, please contact us immediately
+            at the address in Section 12.
+          </p>
+        </section>
+
+        <section id="your-rights">
+          <h2>8. Your Rights</h2>
+          <p>Depending on your location, you may have the following rights regarding your personal information:</p>
+          <ul>
+            <li><strong>Access</strong> — request a copy of the personal information we hold about you</li>
+            <li><strong>Correction</strong> — request correction of inaccurate information (note: email addresses are permanent identity fields and cannot be changed)</li>
+            <li><strong>Deletion</strong> — request deletion of your account and personal information, subject to financial record retention requirements</li>
+            <li><strong>Portability</strong> — request your contribution history and account data in a machine-readable format</li>
+            <li><strong>Objection</strong> — object to certain processing of your personal information</li>
+            <li><strong>Withdrawal of consent</strong> — disconnect your bank account at any time to withdraw consent for financial data access</li>
+          </ul>
+          <p>
+            To exercise any of these rights, contact us at the address in Section 12.
+            We will respond within 30 days. We may need to verify your identity before
+            fulfilling a request.
+          </p>
+        </section>
+
+        <section id="cookies">
+          <h2>9. Cookies and Local Storage</h2>
+          <p>
+            eChama uses browser local storage (not third-party tracking cookies) to
+            maintain your authenticated session and remember your last active group.
+            This data is stored only on your device and is cleared when you log out.
+          </p>
+          <p>
+            We do not use third-party advertising cookies or cross-site tracking
+            technologies.
+          </p>
+        </section>
+
+        <section id="children">
+          <h2>10. Children's Privacy</h2>
+          <p>
+            The Services are not directed to individuals under the age of 18. We do
+            not knowingly collect personal information from children. If you believe
+            a child has provided us with personal information, please contact us so
+            we can delete it.
+          </p>
+        </section>
+
+        <section id="changes">
+          <h2>11. Changes to This Policy</h2>
+          <p>
+            We may update this Privacy Policy from time to time. When we make material
+            changes, we will notify registered users by email and update the "Last
+            updated" date at the top of this page. Your continued use of the Services
+            after notification constitutes acceptance of the revised policy.
+          </p>
+          <p>
+            We encourage you to review this policy periodically.
+          </p>
+        </section>
+
+        <section id="contact">
+          <h2>12. Contact Us</h2>
+          <p>
+            If you have questions about this Privacy Policy, wish to exercise your
+            rights, or need to report a security concern, please contact us:
+          </p>
+          <div class="contact-card">
+            <p><strong>eChama Privacy Team</strong></p>
+            <p>Email: <a href="mailto:support@echama.com">support@echama.com</a></p>
+            <p>Subject line: <em>Privacy Request — [Your Name]</em></p>
+          </div>
+          <p style="margin-top: 16px;">
+            For concerns related to Plaid bank-linking data or to revoke Plaid's
+            access to your financial data, you may contact Plaid directly at
+            <a href="https://plaid.com/legal/#consumers" target="_blank" rel="noopener noreferrer">plaid.com/legal</a>.
+            For concerns related to Stripe payment data or Stripe Financial Connections,
+            you may contact Stripe directly at
+            <a href="https://stripe.com/privacy" target="_blank" rel="noopener noreferrer">stripe.com/privacy</a>.
+          </p>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="/echama.html" class="footer-logo">
+          <img src="/echama-logo.png" alt="eChama logo" class="footer-logo-img" />
+          <span class="footer-logo-text">eChama</span>
+        </a>
+        <ul class="footer-links">
+          <li><a href="/echama.html">Home</a></li>
+          <li><a href="/echama.html#features">About</a></li>
+          <li><a href="/privacy.html" style="color:rgba(255,255,255,0.85);">Privacy</a></li>
+          <li><a href="/auth/login">Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 eChama. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

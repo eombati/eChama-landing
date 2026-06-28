@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>eChama — Scheme 2: Growth Green</title>
+  <link rel="icon" type="image/png" href="/echama-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet" />
+  <style>
+    /* ── Reset & Base ─────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      background: #FAFAF9;
+      color: #1C1917;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Scheme 2: Growth Green tokens ───────────────────────────────── */
+    :root {
+      --bg:          #FAFAF9;
+      --surface:     #FFFFFF;
+      --nav-bg:      #1C1917;
+      --primary:     #059669;
+      --primary-dk:  #047857;
+      --primary-lt:  #ECFDF5;
+      --accent:      #0284C7;
+      --text:        #1C1917;
+      --text-muted:  #78716C;
+      --border:      #E7E5E4;
+      --radius:      8px;
+    }
+
+    /* ── Utilities ────────────────────────────────────────────────────── */
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── Navbar ───────────────────────────────────────────────────────── */
+    nav {
+      background: var(--nav-bg);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      text-decoration: none;
+    }
+    .nav-logo-img {
+      height: 56px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+      margin-top: 6px;
+    }
+    .nav-logo-text {
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.4px;
+      line-height: 1;
+      white-space: nowrap;
+      margin-left: -13px;
+    }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: rgba(255,255,255,0.65);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: var(--radius);
+      transition: color 0.15s, background 0.15s;
+    }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+    .nav-links a.active { color: #fff; }
+    .btn-nav {
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 8px 18px;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.15s;
+    }
+    .btn-nav:hover { background: var(--primary-dk); }
+
+    /* ── Buttons ──────────────────────────────────────────────────────── */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      padding: 13px 28px;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      transition: background 0.15s, transform 0.1s;
+    }
+    .btn-primary:hover { background: var(--primary-dk); transform: translateY(-1px); }
+    .btn-ghost {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: transparent;
+      color: var(--text);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 13px 24px;
+      border-radius: var(--radius);
+      border: 1.5px solid var(--border);
+      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .btn-ghost:hover { border-color: var(--primary); background: var(--primary-lt); color: var(--primary); }
+
+    /* ── Hero ─────────────────────────────────────────────────────────── */
+    .hero {
+      padding: 96px 0 80px;
+      overflow: hidden;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: stretch;
+      gap: 64px;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary-lt);
+      color: var(--primary);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-bottom: 24px;
+    }
+    .hero-eyebrow-dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+    .hero h1 {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+    .hero h1 span { color: var(--primary); }
+    .hero-desc {
+      font-size: 18px;
+      color: var(--text-muted);
+      line-height: 1.65;
+      margin-bottom: 36px;
+      max-width: 460px;
+    }
+    .hero-cta {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 52px;
+    }
+    .hero-stats {
+      display: flex;
+      gap: 36px;
+      padding-top: 36px;
+      border-top: 1px solid var(--border);
+    }
+    .stat-value {
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--primary);
+      letter-spacing: -0.5px;
+    }
+    .stat-label {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* ── Hero Illustration ────────────────────────────────────────────── */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      align-self: stretch;
+    }
+    .hero-img-wrap {
+      width: 100%;
+      max-width: 480px;
+      height: calc(100% - 25px);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 24px 64px rgba(5, 150, 105, 0.18);
+    }
+    .hero-img-wrap img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    /* ── Features ─────────────────────────────────────────────────────── */
+    .features {
+      padding: 80px 0;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .section-label {
+      text-align: center;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 14px;
+    }
+    .section-title {
+      text-align: center;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+      color: var(--text);
+      margin-bottom: 12px;
+    }
+    .section-sub {
+      text-align: center;
+      font-size: 17px;
+      color: var(--text-muted);
+      max-width: 520px;
+      margin: 0 auto 56px;
+      line-height: 1.6;
+    }
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .feature-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: calc(var(--radius) + 2px);
+      padding: 32px 28px;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .feature-card:hover {
+      box-shadow: 0 8px 24px rgba(5, 150, 105, 0.10);
+      transform: translateY(-2px);
+    }
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--primary-lt);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+    .feature-title {
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 10px;
+    }
+    .feature-desc {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ── CTA Banner ───────────────────────────────────────────────────── */
+    .cta-section {
+      padding: 96px 0;
+      text-align: center;
+    }
+    .cta-card {
+      background: var(--nav-bg);
+      border-radius: 16px;
+      padding: 72px 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 30% 60%, rgba(5,150,105,0.30) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .cta-label {
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--primary);
+      margin-bottom: 16px;
+    }
+    .cta-title {
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -0.8px;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .cta-desc {
+      font-size: 17px;
+      color: rgba(255,255,255,0.6);
+      max-width: 480px;
+      margin: 0 auto 36px;
+      line-height: 1.65;
+    }
+    .btn-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: #fff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 700;
+      padding: 14px 32px;
+      border-radius: var(--radius);
+      transition: background 0.15s, transform 0.1s;
+    }
+    .btn-cta:hover { background: var(--primary-dk); transform: translateY(-1px); }
+
+    /* ── Footer ───────────────────────────────────────────────────────── */
+    footer {
+      background: var(--nav-bg);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 48px 0 32px;
+    }
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      text-decoration: none;
+    }
+    .footer-logo-img { height: 56px; width: auto; display: block; object-fit: contain; margin-top: 6px; }
+    .footer-logo-text {
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+      margin-left: -13px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+    .footer-links a {
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.15s;
+    }
+    .footer-links a:hover { color: rgba(255,255,255,0.9); }
+    .footer-copy {
+      width: 100%;
+      text-align: center;
+      font-size: 13px;
+      color: rgba(255,255,255,0.25);
+      margin-top: 32px;
+      padding-top: 24px;
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    /* ── Responsive ───────────────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-right { gap: 6px; }
+      .btn-nav { padding: 7px 12px; font-size: 13px; }
+      .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+      .hero h1 { font-size: 36px; }
+      .hero-visual { display: none; }
+      .features-grid { grid-template-columns: 1fr; }
+      .cta-title { font-size: 28px; }
+      .cta-card { padding: 48px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navbar ─────────────────────────────────────────────────────── -->
+  <nav>
+    <div class="container">
+      <div class="nav-inner">
+        <!-- Left: brand logo -->
+        <a href="/echama.html" class="nav-logo">
+          <img src="/echama-logo.png" alt="eChama logo" class="nav-logo-img" />
+          <span class="nav-logo-text">eChama</span>
+        </a>
+        <!-- Right: navigation links + CTA actions -->
+        <div class="nav-right">
+          <ul class="nav-links">
+            <li><a href="/echama.html" class="active">Home</a></li>
+            <li><a href="#features">About</a></li>
+          </ul>
+          <a href="/auth/login" class="btn-nav">Create Group</a>
+          <a href="/auth/login" class="btn-nav">Login →</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Hero ───────────────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-inner">
+
+        <!-- Left: Copy -->
+        <div>
+          <div class="hero-eyebrow">
+            <span class="hero-eyebrow-dot"></span>
+            Grow Together. Save Together.
+          </div>
+          <h1>Save as One,<br>Grow as<br><span>a Community.</span></h1>
+          <p class="hero-desc">
+            eChama brings the power of community savings into the digital age.
+            Pool resources, track contributions with full transparency, automate
+            payments and reporting — built for groups with shared goals.
+          </p>
+          <div class="hero-cta">
+            <a href="/auth/login" class="btn-primary">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M8 1v14M1 8h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+              Start Your Chama
+            </a>
+            <a href="#features" class="btn-ghost">How It Works</a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <div class="stat-value">12,400+</div>
+              <div class="stat-label">Active Members</div>
+            </div>
+            <div>
+              <div class="stat-value">850+</div>
+              <div class="stat-label">Groups Running</div>
+            </div>
+            <div>
+              <div class="stat-value">$2.4M</div>
+              <div class="stat-label">Savings Managed</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Illustration -->
+        <div class="hero-visual">
+          <div class="hero-img-wrap">
+            <img
+              src="echama-hero.png"
+              alt="Person contributing savings to an eChama community jar"
+              width="960"
+              height="960"
+              loading="eager"
+              decoding="async"
+            />
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Features ───────────────────────────────────────────────────── -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="section-label">How It Works</div>
+      <h2 class="section-title">Everything your chama group needs</h2>
+      <p class="section-sub">
+        From contribution tracking to benefit claims, eChama handles the
+        administration so your group can focus on growing together.
+      </p>
+
+      <div class="features-grid">
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2"/>
+              <path d="M16 7V5a2 2 0 0 0-4 0v2M8 7V5a2 2 0 0 0-4 0v2"/>
+            </svg>
+          </div>
+          <div class="feature-title">Pooled Savings</div>
+          <div class="feature-desc">
+            Every contribution is logged with a full audit trail. Members see exactly
+            who paid what and when — building the trust your group runs on.
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+            </svg>
+          </div>
+          <div class="feature-title">Real-Time Dashboard</div>
+          <div class="feature-desc">
+            A clear financial overview for every member. Track group balance, active
+            benefit events, and your personal contribution history at a glance.
+          </div>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+          </div>
+          <div class="feature-title">Secure &amp; Compliant</div>
+          <div class="feature-desc">
+            Bank-grade encryption, role-based access control, and a 7-year immutable
+            audit log keep your group's finances safe and compliant.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA ────────────────────────────────────────────────────────── -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-card">
+        <div class="cta-label">● Start Growing Today</div>
+        <h2 class="cta-title">Your chama's future<br>starts here.</h2>
+        <p class="cta-desc">
+          Join hundreds of groups already using eChama to manage contributions,
+          track benefits, and build lasting financial security together.
+        </p>
+        <a href="/auth/login" class="btn-cta">
+          Create Your Group →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────────────────── -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="/echama.html" class="footer-logo">
+          <img src="/echama-logo.png" alt="eChama logo" class="footer-logo-img" />
+          <span class="footer-logo-text">eChama</span>
+        </a>
+        <ul class="footer-links">
+          <li><a href="/echama.html">Home</a></li>
+          <li><a href="#features">About</a></li>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/auth/login">Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 eChama. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
