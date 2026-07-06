@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — eChama</title>
+  <link rel="icon" type="image/png" href="/echama-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      background: #FAFAF9;
+      color: #1C1917;
+      -webkit-font-smoothing: antialiased;
+    }
+    :root {
+      --bg:         #FAFAF9;
+      --surface:    #FFFFFF;
+      --nav-bg:     #1C1917;
+      --primary:    #059669;
+      --primary-dk: #047857;
+      --primary-lt: #ECFDF5;
+      --text:       #1C1917;
+      --text-muted: #78716C;
+      --border:     #E7E5E4;
+      --radius:     8px;
+    }
+    .container { max-width: 1160px; margin: 0 auto; padding: 0 24px; }
+
+    /* ── Navbar ── */
+    nav {
+      background: var(--nav-bg);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+    .nav-logo { display: flex; align-items: center; gap: 0; text-decoration: none; }
+    .nav-logo-img { height: 56px; width: auto; display: block; object-fit: contain; margin-top: 6px; }
+    .nav-logo-text { font-size: 18px; font-weight: 700; color: #fff; margin-left: -13px; }
+    .nav-right { display: flex; align-items: center; gap: 8px; }
+    .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,0.65); text-decoration: none; font-size: 14px;
+      font-weight: 500; padding: 6px 14px; border-radius: var(--radius);
+      transition: color 0.15s, background 0.15s;
+    }
+    .nav-links a:hover { color: #fff; background: rgba(255,255,255,0.08); }
+    .btn-nav {
+      background: var(--primary); color: #fff; text-decoration: none;
+      font-size: 14px; font-weight: 600; padding: 8px 20px;
+      border-radius: var(--radius); border: none; cursor: pointer;
+      transition: background 0.15s;
+    }
+    .btn-nav:hover { background: var(--primary-dk); }
+
+    /* ── Page header ── */
+    .page-header {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 56px 0 48px;
+    }
+    .page-header-label {
+      font-size: 12px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--primary); margin-bottom: 12px;
+    }
+    .page-header h1 {
+      font-size: 40px; font-weight: 800; letter-spacing: -1px;
+      color: var(--text); margin-bottom: 12px;
+    }
+    .page-header-meta { font-size: 14px; color: var(--text-muted); }
+
+    /* ── Policy body ── */
+    .policy-layout {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 56px;
+      padding: 64px 0 96px;
+      align-items: start;
+    }
+    @media (max-width: 768px) {
+      .policy-layout { grid-template-columns: 1fr; }
+      .policy-toc { display: none; }
+      .page-header h1 { font-size: 28px; }
+      .nav-links { display: none; }
+    }
+
+    /* ── Table of contents ── */
+    .policy-toc { position: sticky; top: 84px; }
+    .toc-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--text-muted); margin-bottom: 14px;
+    }
+    .toc-list { list-style: none; }
+    .toc-list li { margin-bottom: 6px; }
+    .toc-list a {
+      font-size: 13px; color: var(--text-muted); text-decoration: none;
+      line-height: 1.5; transition: color 0.15s;
+    }
+    .toc-list a:hover { color: var(--primary); }
+
+    /* ── Policy content ── */
+    .policy-content section {
+      margin-bottom: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid var(--border);
+    }
+    .policy-content section:last-child { border-bottom: none; margin-bottom: 0; }
+    .policy-content h2 {
+      font-size: 22px; font-weight: 700; color: var(--text);
+      letter-spacing: -0.3px; margin-bottom: 16px;
+    }
+    .policy-content h3 {
+      font-size: 16px; font-weight: 600; color: var(--text);
+      margin-top: 24px; margin-bottom: 10px;
+    }
+    .policy-content p {
+      font-size: 15px; color: var(--text-muted); line-height: 1.75; margin-bottom: 14px;
+    }
+    .policy-content p:last-child { margin-bottom: 0; }
+    .policy-content ul { margin: 10px 0 14px 0; padding-left: 20px; }
+    .policy-content ul li {
+      font-size: 15px; color: var(--text-muted); line-height: 1.75; margin-bottom: 6px;
+    }
+    .highlight-box {
+      background: var(--primary-lt);
+      border: 1px solid #A7F3D0;
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+    .highlight-box p { color: #065F46; margin-bottom: 0; font-size: 14px; }
+    .warning-box {
+      background: #FFF7ED;
+      border: 1px solid #FED7AA;
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+    .warning-box p { color: #9A3412; margin-bottom: 0; font-size: 14px; }
+    .contact-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: calc(var(--radius) + 2px);
+      padding: 28px 32px;
+      margin-top: 16px;
+    }
+    .contact-card p { color: var(--text); margin-bottom: 6px; }
+    .contact-card a { color: var(--primary); text-decoration: none; }
+    .contact-card a:hover { text-decoration: underline; }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--nav-bg);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 48px 0 32px;
+    }
+    .footer-inner {
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 24px; flex-wrap: wrap;
+    }
+    .footer-logo { display: flex; align-items: center; gap: 0; text-decoration: none; }
+    .footer-logo-img { height: 56px; width: auto; display: block; object-fit: contain; margin-top: 6px; }
+    .footer-logo-text { font-size: 16px; font-weight: 700; color: #fff; margin-left: -13px; }
+    .footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; }
+    .footer-links a {
+      color: rgba(255,255,255,0.45); text-decoration: none;
+      font-size: 14px; transition: color 0.15s;
+    }
+    .footer-links a:hover { color: rgba(255,255,255,0.9); }
+    .footer-copy {
+      width: 100%; text-align: center; font-size: 13px;
+      color: rgba(255,255,255,0.25); margin-top: 32px;
+      padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Navbar ── -->
+  <nav>
+    <div class="container">
+      <div class="nav-inner">
+        <a href="/echama.html" class="nav-logo">
+          <img src="/echama-logo.png" alt="eChama logo" class="nav-logo-img" />
+          <span class="nav-logo-text">eChama</span>
+        </a>
+        <div class="nav-right">
+          <ul class="nav-links">
+            <li><a href="/echama.html">Home</a></li>
+            <li><a href="/echama.html#features">About</a></li>
+            <li><a href="/support.html">Support</a></li>
+          </ul>
+          <a href="/auth/login" class="btn-nav">Login →</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Page Header ── -->
+  <div class="page-header">
+    <div class="container">
+      <div class="page-header-label">Legal</div>
+      <h1>Terms of Service</h1>
+      <p class="page-header-meta">Effective date: July 6, 2026 &nbsp;·&nbsp; Last updated: July 6, 2026</p>
+    </div>
+  </div>
+
+  <!-- ── Body ── -->
+  <div class="container">
+    <div class="policy-layout">
+
+      <!-- Table of contents -->
+      <aside class="policy-toc">
+        <div class="toc-label">On this page</div>
+        <ul class="toc-list">
+          <li><a href="#introduction">1. Introduction</a></li>
+          <li><a href="#eligibility">2. Eligibility</a></li>
+          <li><a href="#account">3. Your Account</a></li>
+          <li><a href="#platform">4. Platform Description</a></li>
+          <li><a href="#payments">5. Payments &amp; Fees</a></li>
+          <li><a href="#refunds">6. Refund &amp; Dispute Policy</a></li>
+          <li><a href="#cancellation">7. Cancellation Policy</a></li>
+          <li><a href="#conduct">8. Acceptable Use</a></li>
+          <li><a href="#intellectual">9. Intellectual Property</a></li>
+          <li><a href="#liability">10. Limitation of Liability</a></li>
+          <li><a href="#changes">11. Changes to These Terms</a></li>
+          <li><a href="#governing">12. Governing Law</a></li>
+          <li><a href="#contact">13. Contact Us</a></li>
+        </ul>
+      </aside>
+
+      <!-- Content -->
+      <div class="policy-content">
+
+        <section id="introduction">
+          <h2>1. Introduction</h2>
+          <p>
+            Welcome to eChama. These Terms of Service ("Terms") govern your access to and
+            use of the eChama platform, website, and related services (collectively, the
+            "Services") operated by eChama ("we," "us," or "our").
+          </p>
+          <p>
+            By creating an account or using the Services, you agree to be bound by these
+            Terms and our <a href="/privacy.html" style="color: var(--primary);">Privacy Policy</a>.
+            If you do not agree, please do not use the Services.
+          </p>
+          <div class="highlight-box">
+            <p>
+              <strong>Summary:</strong> eChama is a savings group management platform. We
+              provide tools for groups to track contributions, manage membership, and
+              process payments. We are not a bank, and we do not hold or guarantee your funds.
+            </p>
+          </div>
+        </section>
+
+        <section id="eligibility">
+          <h2>2. Eligibility</h2>
+          <p>To use the Services you must:</p>
+          <ul>
+            <li>Be at least 18 years of age</li>
+            <li>Be a human individual (automated accounts are not permitted without prior written consent)</li>
+            <li>Provide accurate and complete registration information</li>
+            <li>Not be prohibited from using the Services under applicable law</li>
+          </ul>
+          <p>
+            By using the Services you represent and warrant that you meet all of
+            the eligibility requirements above.
+          </p>
+        </section>
+
+        <section id="account">
+          <h2>3. Your Account</h2>
+          <h3>3.1 Registration</h3>
+          <p>
+            You must create an account to access the full Services. You agree to provide
+            accurate, current, and complete information and to keep your account
+            information up to date.
+          </p>
+          <h3>3.2 Account security</h3>
+          <p>
+            You are responsible for maintaining the confidentiality of your password and
+            for all activity that occurs under your account. Notify us immediately at
+            <a href="mailto:support@echama.com">support@echama.com</a> if you suspect any
+            unauthorised access to your account.
+          </p>
+          <h3>3.3 One account per person</h3>
+          <p>
+            Each person may maintain only one eChama account. Creating multiple accounts
+            to circumvent restrictions or policies is prohibited.
+          </p>
+          <h3>3.4 Email is your identity</h3>
+          <p>
+            Your email address is your permanent identity on the platform and cannot be
+            changed after registration. Choose your registration email carefully.
+          </p>
+        </section>
+
+        <section id="platform">
+          <h2>4. Platform Description</h2>
+          <p>
+            eChama provides software tools for cooperative savings groups ("chamas") to:
+          </p>
+          <ul>
+            <li>Track member contributions and group balances</li>
+            <li>Manage group membership, roles, and invitations</li>
+            <li>Create and approve case events (benefit claims)</li>
+            <li>Process member contribution payments via ACH bank transfer through Stripe</li>
+            <li>Link a group bank account via Plaid to sync transactions and match contributions</li>
+            <li>Generate reports and maintain an audit trail of all financial activity</li>
+          </ul>
+          <div class="warning-box">
+            <p>
+              <strong>Important:</strong> eChama is a software platform, not a bank,
+              financial institution, or money transmitter. We do not hold, pool, or
+              guarantee any funds. All money movement occurs between your members and
+              your group's own bank account via third-party payment processors (Stripe)
+              and bank-linking providers (Plaid). eChama is not responsible for the
+              actions or failures of Stripe, Plaid, or any financial institution.
+            </p>
+          </div>
+        </section>
+
+        <section id="payments">
+          <h2>5. Payments &amp; Fees</h2>
+          <h3>5.1 Member contribution payments</h3>
+          <p>
+            Members may submit contribution payments through the platform via ACH bank
+            transfer. Payments are processed by Stripe and are subject to Stripe's
+            terms of service. ACH transfers typically settle within 3–5 business days.
+            eChama does not guarantee settlement timelines, which are determined by the
+            banking system.
+          </p>
+          <h3>5.2 Payment processing fees</h3>
+          <p>
+            Stripe charges standard payment processing fees for ACH transfers. These fees
+            are separate from any eChama platform fees and are governed by your agreement
+            with Stripe.
+          </p>
+          <h3>5.3 Platform fees</h3>
+          <p>
+            Details of any eChama platform subscription or service fees will be disclosed
+            to group administrators at the time of subscription. We reserve the right to
+            introduce or modify fees with at least 30 days' written notice to affected
+            account holders.
+          </p>
+          <h3>5.4 Failed payments</h3>
+          <p>
+            If a payment fails (for example due to insufficient funds or a bank rejection),
+            the failed transaction will be recorded in the platform but will not be credited
+            as a contribution. You will be notified by email. Failed payments may incur
+            Stripe return fees, which are the responsibility of the member whose payment failed.
+          </p>
+        </section>
+
+        <section id="refunds">
+          <h2>6. Refund &amp; Dispute Policy</h2>
+          <h3>6.1 Contribution payments</h3>
+          <p>
+            Contribution payments processed through eChama represent voluntary transfers
+            from a member to a group's savings account. Because these funds are deposited
+            directly into your group's bank account and are not held by eChama, refunds
+            of contribution payments are at the sole discretion of your group administrator.
+            To request a refund of a contribution, contact your group administrator directly.
+          </p>
+          <h3>6.2 Disputed transactions</h3>
+          <p>
+            If you believe a payment was processed in error or without your authorisation,
+            you must notify us within <strong>30 days</strong> of the transaction date by
+            contacting support at <a href="mailto:support@echama.com">support@echama.com</a>
+            or calling <a href="tel:+16513179215">651-317-9215</a>. We will investigate and
+            work with Stripe to resolve the dispute. We aim to respond to dispute enquiries
+            within 3 business days.
+          </p>
+          <h3>6.3 Platform subscription fees</h3>
+          <p>
+            Platform subscription fees are non-refundable after 30 days from the billing
+            date. If you believe you were charged in error, contact us within 30 days
+            and we will review your request.
+          </p>
+          <h3>6.4 Auto-Pay deductions</h3>
+          <p>
+            If you are enrolled in Auto-Pay, an ACH debit will be initiated automatically
+            when your group administrator approves a case event. You will receive an email
+            notification prior to and following the deduction. To dispute an Auto-Pay
+            charge, contact us within 30 days. To prevent future Auto-Pay deductions,
+            unenroll from Auto-Pay in your Payments settings before the case event is approved.
+          </p>
+          <div class="highlight-box">
+            <p>
+              <strong>How to raise a dispute:</strong> Email <a href="mailto:support@echama.com" style="color: #065F46; font-weight: 600;">support@echama.com</a>
+              with the subject line "Payment Dispute — [Your Name] — [Transaction Date]",
+              or call <strong>651-317-9215</strong>. Include your name, group name, amount,
+              and date of the transaction.
+            </p>
+          </div>
+        </section>
+
+        <section id="cancellation">
+          <h2>7. Cancellation Policy</h2>
+          <h3>7.1 Cancelling your account</h3>
+          <p>
+            You may cancel your eChama account at any time by contacting us at
+            <a href="mailto:support@echama.com">support@echama.com</a>. Before cancellation,
+            you should ensure that:
+          </p>
+          <ul>
+            <li>Any pending contribution payments have settled</li>
+            <li>You have exported any reports or records you wish to retain</li>
+            <li>Your group administrator is aware of your departure from active groups</li>
+          </ul>
+          <h3>7.2 Effect of cancellation</h3>
+          <p>
+            Upon account cancellation your access to the platform is terminated and your
+            profile is deactivated. Your personal account information (name, email, phone)
+            is deleted within 90 days of the cancellation request.
+          </p>
+          <h3>7.3 Financial record retention</h3>
+          <p>
+            Contribution and payment records associated with your account are retained for
+            <strong>7 years</strong> from the transaction date in accordance with applicable
+            financial recordkeeping requirements. This data is retained even after account
+            cancellation and is not subject to deletion requests during the retention period.
+            This is required to maintain the integrity of group financial records and to
+            support regulatory compliance.
+          </p>
+          <h3>7.4 Group administrator cancellation</h3>
+          <p>
+            If a group administrator cancels their account, they must first transfer the
+            administrator role to another active member or contact us to arrange orderly
+            group closure. A group cannot be left without an active administrator.
+          </p>
+          <h3>7.5 Platform subscription cancellation</h3>
+          <p>
+            Platform subscriptions may be cancelled at any time. Cancellation takes effect
+            at the end of the current billing period. No partial-period refunds are issued
+            unless required by applicable law.
+          </p>
+        </section>
+
+        <section id="conduct">
+          <h2>8. Acceptable Use</h2>
+          <p>You agree not to use the Services to:</p>
+          <ul>
+            <li>Submit false, fraudulent, or misleading information</li>
+            <li>Impersonate another person or entity</li>
+            <li>Process payments for transactions unrelated to your group's stated savings purpose</li>
+            <li>Attempt to gain unauthorised access to any other user's account or group data</li>
+            <li>Use the platform for any unlawful purpose or in violation of any applicable law</li>
+            <li>Introduce malicious code, scripts, or automated bots</li>
+            <li>Circumvent, disable, or interfere with security features of the platform</li>
+          </ul>
+          <p>
+            We reserve the right to suspend or terminate accounts that violate these terms
+            without prior notice.
+          </p>
+        </section>
+
+        <section id="intellectual">
+          <h2>9. Intellectual Property</h2>
+          <p>
+            The eChama platform, including its software, design, text, graphics, and logo,
+            is owned by eChama and protected by applicable intellectual property laws. You
+            may not reproduce, distribute, or create derivative works from any part of the
+            Services without our prior written consent.
+          </p>
+          <p>
+            You retain ownership of all data you input into the platform, including group
+            names, contribution records, and member information. You grant eChama a limited
+            licence to store and process this data solely to provide the Services to you.
+          </p>
+        </section>
+
+        <section id="liability">
+          <h2>10. Limitation of Liability</h2>
+          <p>
+            To the maximum extent permitted by applicable law, eChama and its officers,
+            directors, employees, and agents shall not be liable for any indirect,
+            incidental, special, consequential, or punitive damages, including but not
+            limited to loss of funds, loss of data, or interruption of service, arising
+            out of or related to your use of the Services.
+          </p>
+          <p>
+            eChama's total liability to you for any claims arising under these Terms shall
+            not exceed the greater of (a) the fees paid by you to eChama in the 12 months
+            preceding the claim, or (b) USD $100.
+          </p>
+          <p>
+            eChama is not responsible for the actions, errors, or omissions of third-party
+            service providers including Stripe and Plaid. Your use of those services is
+            governed by their respective terms of service.
+          </p>
+          <div class="warning-box">
+            <p>
+              <strong>No warranty:</strong> The Services are provided "as is" and "as available"
+              without warranty of any kind, express or implied. We do not warrant that the
+              Services will be uninterrupted, error-free, or free of security vulnerabilities.
+            </p>
+          </div>
+        </section>
+
+        <section id="changes">
+          <h2>11. Changes to These Terms</h2>
+          <p>
+            We may update these Terms from time to time. When we make material changes we
+            will notify registered users by email at least 14 days before the changes take
+            effect and update the "Last updated" date at the top of this page. Your
+            continued use of the Services after the effective date constitutes acceptance
+            of the revised Terms.
+          </p>
+          <p>
+            If you do not agree with the revised Terms, you may cancel your account before
+            the effective date.
+          </p>
+        </section>
+
+        <section id="governing">
+          <h2>12. Governing Law</h2>
+          <p>
+            These Terms are governed by and construed in accordance with the laws of the
+            United States. Any disputes arising under these Terms shall be subject to the
+            exclusive jurisdiction of the courts located in the United States.
+          </p>
+        </section>
+
+        <section id="contact">
+          <h2>13. Contact Us</h2>
+          <p>
+            If you have questions about these Terms, a payment dispute, or a cancellation
+            request, please contact us:
+          </p>
+          <div class="contact-card">
+            <p><strong>eChama Support</strong></p>
+            <p>Email: <a href="mailto:support@echama.com">support@echama.com</a></p>
+            <p>Phone: <a href="tel:+16513179215">651-317-9215</a> &nbsp;·&nbsp; Mon – Fri, 9 am – 5 pm CT</p>
+            <p style="margin-top: 10px; font-size: 14px; color: var(--text-muted);">
+              For payment disputes include subject line: <em>Payment Dispute — [Your Name] — [Transaction Date]</em><br>
+              For cancellation requests include subject line: <em>Account Cancellation — [Your Name]</em>
+            </p>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="container">
+      <div class="footer-inner">
+        <a href="/echama.html" class="footer-logo">
+          <img src="/echama-logo.png" alt="eChama logo" class="footer-logo-img" />
+          <span class="footer-logo-text">eChama</span>
+        </a>
+        <ul class="footer-links">
+          <li><a href="/echama.html">Home</a></li>
+          <li><a href="/echama.html#features">About</a></li>
+          <li><a href="/terms.html" style="color:rgba(255,255,255,0.85);">Terms</a></li>
+          <li><a href="/privacy.html">Privacy</a></li>
+          <li><a href="/support.html">Support</a></li>
+          <li><a href="/auth/login">Login</a></li>
+        </ul>
+      </div>
+      <div class="footer-copy">
+        &copy; 2026 eChama. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
