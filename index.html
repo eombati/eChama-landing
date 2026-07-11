@@ -109,6 +109,7 @@
       background: #FAFAF9;
       color: #1C1917;
       -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
     }
 
     /* ── Scheme 2: Growth Green tokens ───────────────────────────────── */
@@ -252,16 +253,6 @@
       font-weight: 600 !important;
       margin-top: 4px;
     }
-    @media (max-width: 767px) {
-      .nav-inner { height: 56px; }
-      .nav-links { display: none; }
-      .nav-logo-img { height: 40px; }
-      .nav-logo-text { font-size: 17px; }
-      .nav-cta-create { display: none; }
-      .btn-nav { padding: 7px 14px; font-size: 13px; }
-      .nav-hamburger { display: flex; }
-    }
-
     /* ── Buttons ──────────────────────────────────────────────────────── */
     .btn-primary {
       display: inline-flex;
@@ -572,16 +563,28 @@
     }
 
     /* ── Responsive ───────────────────────────────────────────────────── */
-    @media (max-width: 768px) {
+    @media (max-width: 767px) {
+      /* Nav */
+      .nav-inner { height: 56px; }
       .nav-links { display: none; }
       .nav-right { gap: 6px; }
-      .btn-nav { padding: 7px 12px; font-size: 13px; }
+      .nav-logo-img { height: 40px; }
+      .nav-logo-text { font-size: 17px; }
+      .nav-cta-create { display: none; }
+      .btn-nav { padding: 7px 14px; font-size: 13px; }
+      .nav-hamburger { display: flex; }
+      /* Hero */
       .hero-inner { grid-template-columns: 1fr; gap: 48px; }
       .hero h1 { font-size: 36px; }
       .hero-visual { display: none; }
+      .hero-stats { flex-wrap: wrap; gap: 20px; }
+      /* Features */
       .features-grid { grid-template-columns: 1fr; }
+      /* CTA */
       .cta-title { font-size: 28px; }
       .cta-card { padding: 48px 24px; }
+      /* Footer */
+      .footer-links { flex-wrap: wrap; gap: 16px 24px; }
     }
   </style>
 </head>
