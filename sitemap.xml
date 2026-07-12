@@ -3,43 +3,43 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://echama.com/</loc>
-    <lastmod>2026-07-10</lastmod>
+    <loc>https://www.echama.com/</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://echama.com/" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.echama.com/" />
   </url>
 
   <url>
-    <loc>https://echama.com/pricing</loc>
-    <lastmod>2026-07-10</lastmod>
+    <loc>https://www.echama.com/pricing</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://echama.com/pricing" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.echama.com/pricing" />
   </url>
 
   <url>
-    <loc>https://echama.com/support</loc>
-    <lastmod>2026-07-10</lastmod>
+    <loc>https://www.echama.com/support</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://echama.com/support" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.echama.com/support" />
   </url>
 
   <url>
-    <loc>https://echama.com/terms</loc>
-    <lastmod>2026-07-10</lastmod>
+    <loc>https://www.echama.com/terms</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://echama.com/terms" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.echama.com/terms" />
   </url>
 
   <url>
-    <loc>https://echama.com/privacy</loc>
-    <lastmod>2026-07-10</lastmod>
+    <loc>https://www.echama.com/privacy</loc>
+    <lastmod>2026-07-12</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
-    <xhtml:link rel="alternate" hreflang="en-US" href="https://echama.com/privacy" />
+    <xhtml:link rel="alternate" hreflang="en-US" href="https://www.echama.com/privacy" />
   </url>
 
 </urlset>
