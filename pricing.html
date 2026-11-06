@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- ── Primary SEO ───────────────────────────────────────────────── -->
-  <title>Pricing — eChama | Group Savings Plans from Free to $34.99/mo</title>
-  <meta name="description" content="🇺🇸 Simple, transparent pricing for US chama groups. Free plan for up to 10 members. Paid plans from $9.99/group/month. 60-day free trial — no credit card required." />
+  <title>Pricing — eChama | Free for groups · $0.75 per in-app payment</title>
+  <meta name="description" content="🇺🇸 eChama is free for chama groups — no subscription, no member limits. Members pay a $0.75 fee plus Stripe processing pass-throughs only when they pay through the app." />
   <meta name="robots" content="index, follow" />
   <meta name="author" content="eChama" />
   <link rel="canonical" href="https://echama.com/pricing" />
@@ -15,19 +15,19 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://echama.com/pricing" />
   <meta property="og:site_name" content="eChama" />
-  <meta property="og:title" content="Pricing — eChama | Group Savings Plans from Free to $34.99/mo" />
-  <meta property="og:description" content="🇺🇸 Simple, transparent pricing for US chama groups. Free plan for up to 10 members. 60-day free trial on all paid plans." />
+  <meta property="og:title" content="Pricing — eChama | Free for groups · $0.75 per in-app payment" />
+  <meta property="og:description" content="🇺🇸 No group subscription and no member limits. Members pay $0.75 plus Stripe pass-throughs only on in-app payments." />
   <meta property="og:image" content="https://echama.com/echama-hero.png" />
-  <meta property="og:image:alt" content="eChama pricing plans" />
+  <meta property="og:image:alt" content="eChama pricing" />
   <meta property="og:locale" content="en_US" />
 
   <!-- ── Twitter / X Card ─────────────────────────────────────────── -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Pricing — eChama | Group Savings Plans from Free to $34.99/mo" />
-  <meta name="twitter:description" content="🇺🇸 Simple, transparent pricing for US chama groups. 60-day free trial on all paid plans." />
+  <meta name="twitter:title" content="Pricing — eChama | Free for groups · $0.75 per in-app payment" />
+  <meta name="twitter:description" content="🇺🇸 No group subscription. Members pay $0.75 plus Stripe pass-throughs only on in-app payments." />
   <meta name="twitter:image" content="https://echama.com/echama-hero.png" />
 
-  <!-- ── Structured Data ──────────────────────────────────────────── -->
+  <!-- ── Structured Data (must match the visible page) ────────────── -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -38,7 +38,7 @@
         "name": "eChama Pricing",
         "url": "https://echama.com/pricing",
         "isPartOf": { "@id": "https://echama.com/#website" },
-        "description": "Pricing plans for eChama group savings management app"
+        "description": "eChama is free for groups. Members pay a per-payment fee only when they pay through the app."
       },
       {
         "@type": "SoftwareApplication",
@@ -50,34 +50,18 @@
         "offers": [
           {
             "@type": "Offer",
-            "name": "Free",
+            "name": "Groups",
             "price": "0",
             "priceCurrency": "USD",
-            "description": "1 group, up to 10 members. Manual contribution recording, basic case events, view-only reports.",
+            "description": "No subscription and no member or group limits during launch.",
             "eligibleRegion": { "@type": "Country", "name": "United States" }
           },
           {
             "@type": "Offer",
-            "name": "Starter",
-            "price": "9.99",
+            "name": "In-app member payment",
+            "price": "0.75",
             "priceCurrency": "USD",
-            "description": "1 group, up to 20 members. In-app ACH payments, Plaid bank monitoring, PDF and CSV reports.",
-            "eligibleRegion": { "@type": "Country", "name": "United States" }
-          },
-          {
-            "@type": "Offer",
-            "name": "Standard",
-            "price": "19.99",
-            "priceCurrency": "USD",
-            "description": "1 group, unlimited members. Full 15-report suite, SMS security, automated reminders, AI anomaly detection.",
-            "eligibleRegion": { "@type": "Country", "name": "United States" }
-          },
-          {
-            "@type": "Offer",
-            "name": "Premium",
-            "price": "34.99",
-            "priceCurrency": "USD",
-            "description": "3 groups, unlimited members. Dues tracking, contribution obligations engine, automated monthly reports.",
+            "description": "Per in-app ACH payment, plus amounts equal to Stripe's ACH processing fee (0.8%, up to $5) and payout fee (0.25%). The group receives the full contribution.",
             "eligibleRegion": { "@type": "Country", "name": "United States" }
           }
         ]
@@ -87,51 +71,23 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "Who pays the subscription — the group or individual members?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The group admin pays the subscription from the group's shared funds. Individual members never pay a subscription fee directly. Split across a typical 15-member group, the Standard plan costs about $1.33 per member per month."
-            }
+            "name": "Does my group pay anything to use eChama?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. During launch there is no group subscription and no limit on members or groups. If we introduce group plans, we will email you at least 30 days before any charge." }
           },
           {
             "@type": "Question",
-            "name": "What happens when my 60-day free trial ends?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "If you have not added a payment method, your account automatically downgrades to the Free plan (up to 10 members, no in-app payments). Your data is never deleted. You can upgrade again at any time to restore full access."
-            }
+            "name": "What does a member pay for an in-app payment?",
+            "acceptedAnswer": { "@type": "Answer", "text": "A $0.75 eChama fee, plus amounts equal to Stripe's ACH processing fee (0.8% of the contribution, up to $5) and payout fee (0.25%). On a $100 contribution the member pays $101.80 and the group receives the full $100. The breakdown is shown before every payment." }
           },
           {
             "@type": "Question",
-            "name": "Can I change my plan after signing up?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes. You can upgrade, downgrade, or cancel at any time from your group settings. Upgrades take effect immediately. Downgrades take effect at the end of your current billing cycle. There are no change fees."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the in-app transaction fee and who pays it?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "When a member makes an ACH contribution directly through the eChama app, a small per-payment convenience fee applies: $1.00 on Free, $0.75 on Starter, $0.50 on Standard, and free on Premium. Members who pay via Zelle or bank transfer externally are not charged this fee."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What happens to my group's data if we cancel?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Your data is yours. Before cancelling you can export your full contribution history, case event records, and member roster as CSV or PDF. After cancellation, your account moves to read-only Free mode for 90 days to complete any exports."
-            }
+            "name": "Is there a fee if a member pays outside the app?",
+            "acceptedAnswer": { "@type": "Answer", "text": "No. Payments made outside the app, such as Zelle, check or cash, carry no eChama fee." }
           },
           {
             "@type": "Question",
             "name": "Is eChama available outside the United States?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "eChama is currently available exclusively for savings groups operating in the United States. Bank account linking (Plaid) and in-app payments (Stripe ACH) require US bank accounts."
-            }
+            "acceptedAnswer": { "@type": "Answer", "text": "eChama is currently available only for savings groups in the United States. In-app payments and bank monitoring require US bank accounts." }
           }
         ]
       }
@@ -586,7 +542,7 @@
       line-height: 1.5;
     }
 
-    /* ── 60-day trial trust bar ───────────────────────────────────────── */
+    /* ── Notice bar (launch note) ───────────────────────────────────────── */
     .trial-bar {
       background: var(--primary-lt);
       border-top: 1px solid #A7F3D0;
@@ -876,6 +832,15 @@
     @media (max-width: 480px) {
       .pricing-grid { grid-template-columns: 1fr; }
     }
+    /* ── Launch pricing (no group plans) ── */
+    .pricing-grid.two-col { grid-template-columns: repeat(2, 1fr); max-width: 920px; margin: 0 auto; }
+    @media (max-width: 768px) { .pricing-grid.two-col { grid-template-columns: 1fr; } }
+    .fee-example { overflow-x: auto; }
+    .fee-example .matrix-table td.td-total { font-weight: 700; color: var(--text); }
+    /* Short table: a sticky header inside the overflow wrapper would cover the first row. */
+    .fee-example .matrix-table thead th { position: static; }
+    .fee-example .matrix-table thead th:first-child { width: auto; }
+    .fee-fine { font-size: 13px; color: var(--text-muted); text-align: center; margin-top: 16px; }
   </style>
 </head>
 <body>
@@ -916,38 +881,25 @@
   <!-- ── Page Hero ──────────────────────────────────────────────────── -->
   <section class="page-hero">
     <div class="container">
-      <div class="section-label">Simple, Transparent Pricing</div>
-      <h1>Your chama's tools.<br><span>Your group's budget.</span></h1>
+      <div class="section-label">Launch Pricing</div>
+      <h1>Free for your group.<br><span>Fair, visible fees for members.</span></h1>
       <p>
-        Start free, no credit card required. Every paid plan includes a
-        full 60-day trial. Upgrade, downgrade, or cancel anytime.
+        No subscription, no member limits, no credit card. Members pay a small fee
+        only when they pay through the app &mdash; and see the full breakdown before
+        they confirm.
       </p>
-
-      <!-- Billing toggle -->
-      <div class="billing-wrap">
-        <span class="toggle-label active" id="lbl-monthly">Monthly</span>
-        <label class="switch" aria-label="Switch to annual billing">
-          <input type="checkbox" id="billing-switch" />
-          <span class="switch-track"></span>
-          <span class="switch-thumb"></span>
-        </label>
-        <span class="toggle-label" id="lbl-annual">
-          Annual
-          <span class="save-pill">2 months free</span>
-        </span>
-      </div>
     </div>
   </section>
 
   <!-- ── Pricing Cards ──────────────────────────────────────────────── -->
   <section class="pricing-section">
     <div class="container">
-      <div class="pricing-grid">
+      <div class="pricing-grid two-col">
 
-        <!-- ── Free ── -->
-        <div class="plan-card">
-          <div class="plan-name">Free</div>
-
+        <!-- ── Groups ── -->
+        <div class="plan-card popular">
+          <div class="popular-badge">During launch</div>
+          <div class="plan-name popular-name">For groups</div>
           <div class="price-block">
             <div class="price-amount">
               <sup>$</sup>0
@@ -955,301 +907,96 @@
             </div>
             <div class="price-annual-note">&nbsp;</div>
           </div>
-          <div class="per-member per-member-free">Free forever</div>
-
+          <div class="per-member per-member-free">No subscription</div>
           <p class="plan-desc">
-            Try eChama with your group at no cost. Ideal for small groups
-            evaluating whether the platform fits before committing.
+            Everything eChama does, for any size of group. Admins never pay to set up
+            or run the group.
           </p>
-
           <ul class="plan-features">
             <li>
-              <span class="feat-icon feat-icon-check">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              1 group <span class="feat-limit">up to 10 members</span>
+              <span class="feat-icon feat-icon-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              Unlimited members <span class="feat-limit">no group size limits</span>
             </li>
             <li>
-              <span class="feat-icon feat-icon-check">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              Manual contribution recording
+              <span class="feat-icon feat-icon-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              In-app ACH contributions &amp; Auto-Pay
             </li>
             <li>
-              <span class="feat-icon feat-icon-check">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              Case event submit &amp; approve
+              <span class="feat-icon feat-icon-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              Benefit events with admin approval
             </li>
             <li>
-              <span class="feat-icon feat-icon-check">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              View-only reports &amp; dashboard
+              <span class="feat-icon feat-icon-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              Bank monitoring &amp; automatic deposit matching
             </li>
             <li>
-              <span class="feat-icon feat-icon-dash">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              </span>
-              <span class="feat-muted">In-app payments</span>
+              <span class="feat-icon feat-icon-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              Reports with CSV &amp; PDF export
             </li>
             <li>
-              <span class="feat-icon feat-icon-dash">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/></svg>
-              </span>
-              <span class="feat-muted">PDF &amp; CSV report exports</span>
+              <span class="feat-icon feat-icon-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              Invitations, bulk CSV import &amp; payment reminders
+            </li>
+            <li>
+              <span class="feat-icon feat-icon-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              Announcements &amp; member messages
+            </li>
+            <li>
+              <span class="feat-icon feat-icon-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              SMS security for bank and admin changes
             </li>
           </ul>
-
-          <div class="txn-fee-note">
-            In-app payments available on paid plans.
-          </div>
-
-          <br/>
-          <a href="/auth/login" class="btn-primary" style="margin-top: 20px;">
-            Get Started Free
-          </a>
+          <a href="/auth/login" class="btn-primary" style="margin-top: 20px;">Create Your Group</a>
         </div>
 
-        <!-- ── Starter ── -->
+        <!-- ── Members ── -->
         <div class="plan-card">
-          <div class="plan-name">Starter</div>
-
+          <div class="plan-name">For members</div>
           <div class="price-block">
-            <div class="price-m">
-              <div class="price-amount"><sup>$</sup>9<span style="font-size:28px;font-weight:800;">.99</span><span class="price-period">/mo</span></div>
-              <div class="price-annual-note">&nbsp;</div>
+            <div class="price-amount">
+              <sup>$</sup>0.75
+              <span class="price-period">/payment</span>
             </div>
-            <div class="price-a" hidden>
-              <div class="price-amount"><sup>$</sup>8<span style="font-size:28px;font-weight:800;">.33</span><span class="price-period">/mo</span></div>
-              <div class="price-annual-note">Billed $99.99/year &mdash; save $19.89</div>
-            </div>
+            <div class="price-annual-note">&nbsp;</div>
           </div>
-
-          <div class="per-member">
-            <span class="pm-m">≈ $0.67 / member / mo</span>
-            <span class="pm-a" hidden>≈ $0.56 / member / mo</span>
-            <span style="font-size:11px;font-weight:400;color:#065F46;"> (avg 15 members)</span>
-          </div>
-
+          <div class="per-member">+ Stripe processing &amp; payout pass-throughs</div>
           <p class="plan-desc">
-            Small groups ready to automate. In-app payments, live bank monitoring,
-            and exportable reports for your monthly meeting.
+            Charged only on contributions paid through the app, on top of the
+            contribution &mdash; so your group always receives the full amount.
           </p>
-
           <ul class="plan-features">
             <li>
-              <span class="feat-icon feat-icon-check">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              1 group <span class="feat-limit feat-limit-green">up to 20 members</span>
+              <span class="feat-icon feat-icon-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              Free account &mdash; nothing to download
             </li>
             <li>
-              <span class="feat-icon feat-icon-check">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              In-app ACH contributions (Stripe)
+              <span class="feat-icon feat-icon-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              Full breakdown shown before every payment
             </li>
             <li>
-              <span class="feat-icon feat-icon-check">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              Live bank monitoring &amp; auto-matching
+              <span class="feat-icon feat-icon-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              Your group receives your full contribution
             </li>
             <li>
-              <span class="feat-icon feat-icon-check">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              Contribution &amp; member reports &mdash; PDF &amp; CSV export
+              <span class="feat-icon feat-icon-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              No eChama fee when you pay outside the app
             </li>
             <li>
-              <span class="feat-icon feat-icon-check">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              Case events with documents, approvals &amp; email alerts
-            </li>
-            <li>
-              <span class="feat-icon feat-icon-check">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              Email notifications
+              <span class="feat-icon feat-icon-check"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>
+              Itemized email receipt for Auto-Pay debits
             </li>
           </ul>
-
           <div class="txn-fee-note">
-            In-app transaction fee: <strong>$0.75 / payment</strong>
+            Pass-throughs equal Stripe's ACH processing fee (0.8%, up to $5.00) and
+            payout fee (0.25%). See the examples below.
           </div>
-
-          <br/>
-          <a href="/auth/login" class="btn-ghost" style="margin-top: 20px;">
-            Start 60-Day Free Trial
-          </a>
-        </div>
-
-        <!-- ── Standard — Most Popular ── -->
-        <div class="plan-card popular">
-          <div class="popular-badge">Most Popular</div>
-          <div class="plan-name popular-name">Standard</div>
-
-          <div class="price-block">
-            <div class="price-m">
-              <div class="price-amount"><sup>$</sup>19<span style="font-size:28px;font-weight:800;">.99</span><span class="price-period">/mo</span></div>
-              <div class="price-annual-note">&nbsp;</div>
-            </div>
-            <div class="price-a" hidden>
-              <div class="price-amount"><sup>$</sup>16<span style="font-size:28px;font-weight:800;">.66</span><span class="price-period">/mo</span></div>
-              <div class="price-annual-note">Billed $199.99/year &mdash; save $39.89</div>
-            </div>
-          </div>
-
-          <div class="per-member">
-            <span class="pm-m">≈ $1.33 / member / mo</span>
-            <span class="pm-a" hidden>≈ $1.11 / member / mo</span>
-            <span style="font-size:11px;font-weight:400;color:#065F46;"> (avg 15 members)</span>
-          </div>
-
-          <p class="plan-desc">
-            The complete platform for growing groups. Unlimited members, SMS security,
-            automated reminders, and AI-powered anomaly detection.
-          </p>
-
-          <ul class="plan-features">
-            <li>
-              <span class="feat-icon feat-icon-check">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              1 group <span class="feat-limit feat-limit-green">Unlimited members</span>
-            </li>
-            <li>
-              <span class="feat-icon feat-icon-check">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              Everything in Starter
-            </li>
-            <li>
-              <span class="feat-icon feat-icon-check">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              All 15 reports + full audit trail
-            </li>
-            <li>
-              <span class="feat-icon feat-icon-check">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              SMS step-up security
-            </li>
-            <li>
-              <span class="feat-icon feat-icon-check">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              Automated case event reminders
-            </li>
-            <li>
-              <span class="feat-icon feat-icon-check">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              AI anomaly detection alerts
-            </li>
-          </ul>
-
-          <div class="txn-fee-note">
-            In-app transaction fee: <strong>$0.50 / payment</strong>
-          </div>
-
-          <br/>
-          <a href="/auth/login" class="btn-primary" style="margin-top: 20px;">
-            Start 60-Day Free Trial
-          </a>
-        </div>
-
-        <!-- ── Premium ── -->
-        <div class="plan-card">
-          <div class="plan-name">Premium</div>
-
-          <div class="price-block">
-            <div class="price-m">
-              <div class="price-amount"><sup>$</sup>34<span style="font-size:28px;font-weight:800;">.99</span><span class="price-period">/mo</span></div>
-              <div class="price-annual-note">&nbsp;</div>
-            </div>
-            <div class="price-a" hidden>
-              <div class="price-amount"><sup>$</sup>29<span style="font-size:28px;font-weight:800;">.16</span><span class="price-period">/mo</span></div>
-              <div class="price-annual-note">Billed $349.99/year &mdash; save $69.89</div>
-            </div>
-          </div>
-
-          <div class="per-member">
-            <span class="pm-m">≈ $0.78 / member / mo</span>
-            <span class="pm-a" hidden>≈ $0.65 / member / mo</span>
-            <span style="font-size:11px;font-weight:400;color:#065F46;"> (3 groups × 15 members)</span>
-          </div>
-
-          <p class="plan-desc">
-            For power admins managing multiple groups. Includes 3 groups,
-            dues tracking, obligations engine, and report scheduling.
-          </p>
-
-          <ul class="plan-features">
-            <li>
-              <span class="feat-icon feat-icon-check">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              <span class="feat-limit feat-limit-green" style="margin-left:0;margin-right:6px;">3 groups</span> Unlimited members
-            </li>
-            <li>
-              <span class="feat-icon feat-icon-check">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              Everything in Standard
-            </li>
-            <li>
-              <span class="feat-icon feat-icon-check">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              Monthly dues tracking module
-            </li>
-            <li>
-              <span class="feat-icon feat-icon-check">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              Contribution obligations engine
-            </li>
-            <li>
-              <span class="feat-icon feat-icon-check">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              Automated monthly report delivery
-            </li>
-            <li>
-              <span class="feat-icon feat-icon-check">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-              </span>
-              Custom logo on exported reports
-            </li>
-          </ul>
-
-          <div class="txn-fee-note">
-            In-app transaction fee: <strong>Included</strong> &mdash; no per-payment charge
-          </div>
-
-          <br/>
-          <a href="/auth/login" class="btn-ghost" style="margin-top: 20px;">
-            Start 60-Day Free Trial
-          </a>
         </div>
 
       </div><!-- /pricing-grid -->
-
-      <!-- Add-on note -->
-      <p style="text-align:center;font-size:13px;color:var(--text-muted);margin-top:32px;">
-        Need an additional group without upgrading? Add any extra group for
-        <strong style="color:var(--text);">$14.99/month.</strong> &nbsp;·&nbsp;
-        Enterprise and association pricing available &mdash;
-        <a href="/support.html" style="color:var(--primary);text-decoration:none;font-weight:600;">contact us.</a>
-      </p>
     </div>
   </section>
 
-  <!-- ── 60-day trial trust bar ─────────────────────────────────────── -->
+  <!-- ── Launch note ────────────────────────────────────────────────── -->
   <div class="trial-bar">
     <div class="container">
       <div class="trial-bar-inner">
@@ -1257,308 +1004,47 @@
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         </span>
         <p>
-          <strong>60-day free trial on all paid plans.</strong>
-          <span> No credit card required to start. Cancel any time — your data is always exportable.</span>
+          <strong>No group plans during launch.</strong>
+          <span> If we introduce group plans later, we'll email you at least 30 days before any charge.</span>
         </p>
       </div>
     </div>
   </div>
 
-  <!-- ── Feature Comparison Matrix ──────────────────────────────────── -->
+  <!-- ── Fee examples ───────────────────────────────────────────────── -->
   <section class="matrix-section">
     <div class="container">
-      <div class="section-label">Full Comparison</div>
-      <h2 class="section-title">Everything, side by side</h2>
+      <div class="section-label">Worked Examples</div>
+      <h2 class="section-title">What a member pays</h2>
       <p class="section-sub">
-        Every feature across every plan. No surprises.
+        The same calculation the app uses. Your group always receives the full contribution.
       </p>
-
-      <div class="matrix-wrap">
+      <div class="matrix-wrap fee-example">
         <table class="matrix-table">
           <thead>
             <tr>
-              <th></th>
-              <th>Free</th>
-              <th>Starter</th>
-              <th class="th-popular">Standard</th>
-              <th>Premium</th>
+              <th>Contribution</th>
+              <th>eChama fee</th>
+              <th>Processing (0.8%)</th>
+              <th>Payout (0.25%)</th>
+              <th class="th-popular">Member pays</th>
+              <th>Group receives</th>
             </tr>
           </thead>
           <tbody>
-
-            <!-- ── Group & Members ── -->
-            <tr class="category-row">
-              <td colspan="5">Group &amp; Members</td>
-            </tr>
-            <tr>
-              <td class="td-feature">Groups included</td>
-              <td><span class="c-val">1</span></td>
-              <td><span class="c-val">1</span></td>
-              <td class="td-popular"><span class="c-val">1</span></td>
-              <td><span class="c-val" style="color:var(--primary);font-weight:700;">3</span></td>
-            </tr>
-            <tr>
-              <td class="td-feature">Members per group</td>
-              <td><span class="c-val">10</span></td>
-              <td><span class="c-val">20</span></td>
-              <td class="td-popular"><span class="c-val" style="color:var(--primary);font-weight:700;">Unlimited</span></td>
-              <td><span class="c-val" style="color:var(--primary);font-weight:700;">Unlimited</span></td>
-            </tr>
-            <tr>
-              <td class="td-feature">Member invitations &amp; onboarding</td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td class="td-popular"><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-            </tr>
-            <tr>
-              <td class="td-feature">Bulk CSV member import</td>
-              <td><span class="c-no">—</span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td class="td-popular"><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-            </tr>
-
-            <!-- ── Payments & Banking ── -->
-            <tr class="category-row">
-              <td colspan="5">Payments &amp; Banking</td>
-            </tr>
-            <tr>
-              <td class="td-feature">Manual contribution recording</td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td class="td-popular"><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-            </tr>
-            <tr>
-              <td class="td-feature">In-app ACH contributions (Stripe)</td>
-              <td><span class="c-no">—</span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td class="td-popular"><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-            </tr>
-            <tr>
-              <td class="td-feature">Live bank monitoring (Plaid)</td>
-              <td><span class="c-no">—</span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td class="td-popular"><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-            </tr>
-            <tr>
-              <td class="td-feature">Auto-matching of external deposits</td>
-              <td><span class="c-no">—</span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td class="td-popular"><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-            </tr>
-            <tr>
-              <td class="td-feature">
-                In-app transaction fee
-                <small>Per ACH payment initiated in the app</small>
-              </td>
-              <td><span class="c-val-muted">N/A</span></td>
-              <td><span class="c-val">$0.75</span></td>
-              <td class="td-popular"><span class="c-val">$0.50</span></td>
-              <td><span class="c-val" style="color:var(--primary);font-weight:700;">Included</span></td>
-            </tr>
-
-            <!-- ── Case Events & Benefits ── -->
-            <tr class="category-row">
-              <td colspan="5">Case Events &amp; Benefits</td>
-            </tr>
-            <tr>
-              <td class="td-feature">Case event submission &amp; admin approve/deny
-                <small>Members submit; admin approves or denies with a written reason</small>
-              </td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td class="td-popular"><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-            </tr>
-            <tr>
-              <td class="td-feature">Evidence document uploads &amp; email alerts on case events
-                <small>Attach files (PDF, photo) as proof; members and admins notified at every status change</small>
-              </td>
-              <td><span class="c-no">—</span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td class="td-popular"><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-            </tr>
-            <tr>
-              <td class="td-feature">Admin-created &amp; member-targeted events
-                <small>Admin opens events directly as active; MISC events for ad-hoc fees targeting specific members</small>
-              </td>
-              <td><span class="c-no">—</span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td class="td-popular"><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-            </tr>
-            <tr>
-              <td class="td-feature">Dependent registration &amp; coverage</td>
-              <td><span class="c-no">—</span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td class="td-popular"><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-            </tr>
-            <tr>
-              <td class="td-feature">
-                Contribution obligations engine
-                <small>Automatically tracks which members have paid, owe, or are overdue on each case event</small>
-              </td>
-              <td><span class="c-no">—</span></td>
-              <td><span class="c-no">—</span></td>
-              <td class="td-popular"><span class="c-no">—</span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-            </tr>
-            <tr>
-              <td class="td-feature">Monthly dues tracking
-                <small>Monitor recurring member dues separately from case event contributions</small>
-              </td>
-              <td><span class="c-no">—</span></td>
-              <td><span class="c-no">—</span></td>
-              <td class="td-popular"><span class="c-no">—</span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-            </tr>
-
-            <!-- ── Reporting & Exports ── -->
-            <tr class="category-row">
-              <td colspan="5">Reporting &amp; Exports</td>
-            </tr>
-            <tr>
-              <td class="td-feature">Dashboard &amp; on-screen reports
-                <small>View contribution history and balances on screen — no PDF or CSV export on Free</small>
-              </td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td class="td-popular"><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-            </tr>
-            <tr>
-              <td class="td-feature">PDF &amp; CSV export</td>
-              <td><span class="c-no">—</span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td class="td-popular"><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-            </tr>
-            <tr>
-              <td class="td-feature">Full 15-report suite + audit trail</td>
-              <td><span class="c-no">—</span></td>
-              <td><span class="c-no">—</span></td>
-              <td class="td-popular"><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-            </tr>
-            <tr>
-              <td class="td-feature">
-                Automated monthly report email
-                <small>Delivered to all members, no admin action needed</small>
-              </td>
-              <td><span class="c-no">—</span></td>
-              <td><span class="c-no">—</span></td>
-              <td class="td-popular"><span class="c-no">—</span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-            </tr>
-            <tr>
-              <td class="td-feature">Custom logo on exported reports</td>
-              <td><span class="c-no">—</span></td>
-              <td><span class="c-no">—</span></td>
-              <td class="td-popular"><span class="c-no">—</span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-            </tr>
-
-            <!-- ── Security & Automation ── -->
-            <tr class="category-row">
-              <td colspan="5">Security &amp; Automation</td>
-            </tr>
-            <tr>
-              <td class="td-feature">Email notifications</td>
-              <td><span class="c-no">—</span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td class="td-popular"><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-            </tr>
-            <tr>
-              <td class="td-feature">
-                SMS step-up security
-                <small>OTP verification for payments and sensitive actions</small>
-              </td>
-              <td><span class="c-no">—</span></td>
-              <td><span class="c-no">—</span></td>
-              <td class="td-popular"><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-            </tr>
-            <tr>
-              <td class="td-feature">Automated payment reminders
-                <small>Email reminders sent to members with outstanding contributions before the deadline</small>
-              </td>
-              <td><span class="c-no">—</span></td>
-              <td><span class="c-no">—</span></td>
-              <td class="td-popular"><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-            </tr>
-            <tr>
-              <td class="td-feature">
-                AI anomaly detection
-                <small>Flags unusual deposits and payment drop-offs</small>
-              </td>
-              <td><span class="c-no">—</span></td>
-              <td><span class="c-no">—</span></td>
-              <td class="td-popular"><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-            </tr>
-            <tr>
-              <td class="td-feature">Immutable 7-year audit log</td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td class="td-popular"><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-            </tr>
-
-            <!-- ── Support ── -->
-            <tr class="category-row">
-              <td colspan="5">Support</td>
-            </tr>
-            <tr>
-              <td class="td-feature">Community docs &amp; FAQ</td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td class="td-popular"><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-              <td><span class="c-yes"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span></td>
-            </tr>
-            <tr>
-              <td class="td-feature">Email support</td>
-              <td><span class="c-no">—</span></td>
-              <td><span class="c-val-muted">48-hour response</span></td>
-              <td class="td-popular"><span class="c-val">24-hour response</span></td>
-              <td><span class="c-val">24-hour response</span></td>
-            </tr>
-            <tr>
-              <td class="td-feature">Phone support</td>
-              <td><span class="c-no">—</span></td>
-              <td><span class="c-no">—</span></td>
-              <td class="td-popular"><span class="c-no">—</span></td>
-              <td><span class="c-add">Add-on $9.99/mo</span></td>
-            </tr>
-
-            <!-- ── Bottom CTA row ── -->
-            <tr>
-              <td></td>
-              <td style="padding-top:24px;padding-bottom:24px;">
-                <a href="/auth/login" class="btn-primary" style="font-size:13px;padding:10px 16px;">Get Started Free</a>
-              </td>
-              <td style="padding-top:24px;padding-bottom:24px;">
-                <a href="/auth/login" class="btn-ghost" style="font-size:13px;padding:10px 16px;">Start Trial</a>
-              </td>
-              <td class="td-popular" style="padding-top:24px;padding-bottom:24px;">
-                <a href="/auth/login" class="btn-primary" style="font-size:13px;padding:10px 16px;">Start Trial</a>
-              </td>
-              <td style="padding-top:24px;padding-bottom:24px;">
-                <a href="/auth/login" class="btn-ghost" style="font-size:13px;padding:10px 16px;">Start Trial</a>
-              </td>
-            </tr>
-
+            <tr><td class="td-feature">$20.00</td><td>$0.75</td><td>$0.16</td><td>$0.05</td><td class="td-popular td-total">$20.96</td><td>$20.00</td></tr>
+            <tr><td class="td-feature">$50.00</td><td>$0.75</td><td>$0.40</td><td>$0.12</td><td class="td-popular td-total">$51.27</td><td>$50.00</td></tr>
+            <tr><td class="td-feature">$100.00</td><td>$0.75</td><td>$0.80</td><td>$0.25</td><td class="td-popular td-total">$101.80</td><td>$100.00</td></tr>
+            <tr><td class="td-feature">$500.00</td><td>$0.75</td><td>$4.00</td><td>$1.25</td><td class="td-popular td-total">$506.00</td><td>$500.00</td></tr>
+            <tr><td class="td-feature">$1,000.00<small>processing capped at $5</small></td><td>$0.75</td><td>$5.00</td><td>$2.50</td><td class="td-popular td-total">$1,008.25</td><td>$1,000.00</td></tr>
           </tbody>
         </table>
       </div>
+      <p class="fee-fine">
+        Amounts are rounded to the nearest cent. Fees are kept by eChama, which pays Stripe's
+        processing and payout costs; they are never credited to the group or recorded as a contribution.
+        See <a href="/terms.html#payments" style="color:var(--primary);text-decoration:none;font-weight:600;">Terms §5</a>.
+      </p>
     </div>
   </section>
 
@@ -1574,51 +1060,74 @@
       <div class="faq-grid">
 
         <details>
-          <summary>Who pays the subscription — the group or individual members?</summary>
+          <summary>Does my group pay anything to use eChama?</summary>
           <div class="faq-body">
-            The group admin pays the subscription from the group's shared funds. Individual members never see or pay a subscription fee. When split across a typical 15-member group, the Standard plan works out to about <strong>$1.33 per member per month</strong> — less than a cup of coffee.
+            No. During launch there is no group subscription and no limit on members or groups.
+            If we introduce group plans later, we will email you at least <strong>30 days</strong>
+            before any charge.
           </div>
         </details>
 
         <details>
-          <summary>What happens when my 60-day free trial ends?</summary>
+          <summary>What does a member pay for an in-app payment?</summary>
           <div class="faq-body">
-            If you haven't added a payment method, your account automatically downgrades to the Free plan (up to 10 members, no in-app payments). Your data is always safe — contributions, case events, and member history are never deleted. You can upgrade again at any time to restore full access.
+            A <strong>$0.75</strong> eChama fee, plus amounts equal to Stripe's ACH processing fee
+            (0.8% of the contribution, up to $5) and payout fee (0.25%). On a $100 contribution the
+            member pays <strong>$101.80</strong> and the group receives the full $100. The breakdown
+            and total are shown before every payment.
           </div>
         </details>
 
         <details>
-          <summary>Can I change my plan after signing up?</summary>
+          <summary>Why are there processing and payout amounts?</summary>
           <div class="faq-body">
-            Yes. You can upgrade, downgrade, or cancel at any time from your group settings. Upgrades take effect immediately. Downgrades take effect at the end of your current billing cycle. We never charge a change fee.
+            Stripe charges eChama to debit the member's bank and to pay the money out to your
+            group's bank. Those costs are passed through at the same rates so the group never loses
+            part of a contribution to fees.
           </div>
         </details>
 
         <details>
-          <summary>What is the in-app transaction fee and who pays it?</summary>
+          <summary>Is there a fee if a member pays outside the app?</summary>
           <div class="faq-body">
-            When a member makes an ACH contribution directly through the eChama app, a small per-payment convenience fee is charged to the member at the time of payment. The fee varies by plan: <strong>$1.00</strong> on Free, <strong>$0.75</strong> on Starter, <strong>$0.50</strong> on Standard, and <strong>free</strong> on Premium. Members who pay via Zelle, wire, or other external methods are not charged this fee.
+            No. Payments made outside the app &mdash; Zelle, check, cash or a bank transfer &mdash;
+            carry no eChama fee. Admins can record them, and if your group connects its bank
+            account, eChama can match deposits to members automatically.
+          </div>
+        </details>
+
+        <details>
+          <summary>Does Auto-Pay cost more?</summary>
+          <div class="faq-body">
+            No. Auto-Pay debits use the same fees as any in-app payment, and the confirmation email
+            shows the contribution, the fees and the total debited.
+          </div>
+        </details>
+
+        <details>
+          <summary>What happens if a payment fails?</summary>
+          <div class="faq-body">
+            A failed payment is never recorded as a contribution, and you'll be told by email.
+            Our <a href="/terms.html#payments">Terms (§5.5)</a> allow a returned-payment fee of up to
+            $9.00 for payments returned for insufficient funds; we'll email at least 30 days before we
+            start charging it.
           </div>
         </details>
 
         <details>
           <summary>Do members need to download anything or create an account?</summary>
           <div class="faq-body">
-            Each member needs a free eChama account to accept an invitation, view their contribution history, and make in-app payments. There is no separate app to download — eChama runs entirely in the browser on any device.
+            Each member needs a free eChama account to accept an invitation, view their contribution
+            history and make in-app payments. There's nothing to download &mdash; eChama runs in the
+            browser on any device.
           </div>
         </details>
 
         <details>
-          <summary>What happens to my group's data if we cancel?</summary>
+          <summary>Is eChama available outside the United States?</summary>
           <div class="faq-body">
-            Your data is yours. Before cancelling, you can export your full contribution history, case event records, and member roster as CSV or PDF from any paid plan. After cancellation, your account moves to read-only Free mode for 90 days so you can complete any exports before the account closes.
-          </div>
-        </details>
-
-        <details>
-          <summary>We manage 5+ groups. Is there a plan for that?</summary>
-          <div class="faq-body">
-            The Premium plan includes 3 groups. For associations, churches, or networks managing more than 3 groups, we offer Enterprise pricing with unlimited groups and volume discounts. <a href="/support.html">Contact us</a> and we'll put together a custom quote.
+            eChama is currently available only for savings groups in the United States. In-app
+            payments and bank monitoring require US bank accounts.
           </div>
         </details>
 
@@ -1630,16 +1139,16 @@
   <section class="cta-section">
     <div class="container">
       <div class="cta-card">
-        <div class="cta-label">● 60 Days Free — No Credit Card Required</div>
-        <h2 class="cta-title">Start free.<br>Upgrade when you're ready.</h2>
+        <div class="cta-label">● Free for groups &mdash; no credit card</div>
+        <h2 class="cta-title">Bring your chama online.<br>Your group pays nothing.</h2>
         <p class="cta-desc">
-          Every paid plan starts with a full 60-day free trial. Experience
-          the complete platform before you spend a dollar.
+          Invite every member, track every contribution and let members pay in the app
+          with a clear, upfront fee.
         </p>
         <a href="/auth/login" class="btn-cta">
           Create Your Group →
         </a>
-        <p class="cta-fine">Free plan available forever. No credit card required to start.</p>
+        <p class="cta-fine">No subscription. Members pay a fee only on in-app payments.</p>
       </div>
     </div>
   </section>
@@ -1667,29 +1176,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- ── Billing toggle JS ───────────────────────────────────────────── -->
-  <script>
-    const billingSwitch = document.getElementById('billing-switch');
-    const lblMonthly    = document.getElementById('lbl-monthly');
-    const lblAnnual     = document.getElementById('lbl-annual');
-    const priceMonthly  = document.querySelectorAll('.price-m');
-    const priceAnnual   = document.querySelectorAll('.price-a');
-    const pmMonthly     = document.querySelectorAll('.pm-m');
-    const pmAnnual      = document.querySelectorAll('.pm-a');
-
-    billingSwitch.addEventListener('change', function () {
-      const isAnnual = this.checked;
-
-      priceMonthly.forEach(el => { el.hidden = isAnnual; });
-      priceAnnual.forEach(el  => { el.hidden = !isAnnual; });
-      pmMonthly.forEach(el    => { el.hidden = isAnnual; });
-      pmAnnual.forEach(el     => { el.hidden = !isAnnual; });
-
-      lblMonthly.classList.toggle('active', !isAnnual);
-      lblAnnual.classList.toggle('active', isAnnual);
-    });
-  </script>
 
   <script>
     (function () {
